@@ -41,7 +41,7 @@
       </div>
 
       <div class="nav-right">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="true">Light mode</button>
+        <div class="theme-toggle-root" id="theme-toggle-root"></div>
         <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       </div>
     </div>
@@ -55,8 +55,9 @@
           <h1>Olimjonov <span class="highlight">Ziyodulloh.</span></h1>
           <p class="hero-copy">
             I build responsive, accessible websites with semantic HTML, modern
-            CSS and plain JavaScript. This portfolio collects the projects and
-            reports I have shipped during the Web Programming course.
+            CSS and JavaScript — and I use React components and hooks for the
+            interactive parts. This portfolio collects the projects and reports
+            I have shipped during the Web Programming course.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
@@ -197,6 +198,16 @@
             <h3>GitHub Pages</h3>
             <p>Static hosting, custom 404</p>
           </article>
+          <article class="skill">
+            <span class="num">09 / UI</span>
+            <h3>React</h3>
+            <p>Components, props, hooks</p>
+          </article>
+          <article class="skill">
+            <span class="num">10 / BUILD</span>
+            <h3>Vite</h3>
+            <p>Dev server, production build</p>
+          </article>
         </div>
       </div>
     </section>
@@ -210,94 +221,22 @@
           </div>
           <p class="section-desc">
             Work from the course archive. Each project is live on GitHub Pages
-            and the source is public.
+            and the source is public. The grid is a React component: search,
+            technology filters and the details dialog all run on state.
           </p>
         </div>
 
-        <div class="projects reveal">
-          <article class="project">
-            <div class="project-visual">
-              <span class="visual-mark" aria-hidden="true">01</span>
-              <span class="visual-label">Book Search App · JavaScript</span>
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <h3>Book Search</h3>
-                <span class="status">Live</span>
-              </div>
-              <p>
-                Search the Open Library catalogue by title or author. Handles
-                loading, empty and error states, with lazy-loaded covers.
-              </p>
-              <div class="tags">
-                <span>JavaScript</span><span>Fetch API</span><span>Open Library</span>
-              </div>
-              <a class="project-link" href="https://olimjonovziyodulloh-coder.github.io/webpro-book-search/">Open the app ↗</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-visual blue">
-              <span class="visual-mark" aria-hidden="true">02</span>
-              <span class="visual-label">Accessibility Audit · Report</span>
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <h3>Accessibility Audit</h3>
-                <span class="status">Report</span>
-              </div>
-              <p>
-                A before-and-after audit that fixed landmarks, heading order,
-                contrast, focus styles and form labels.
-              </p>
-              <div class="tags">
-                <span>WCAG</span><span>ARIA</span><span>Audit</span>
-              </div>
-              <a class="project-link" href="https://olimjonovziyodulloh-coder.github.io/web_programming/week9/accessibility-task.html">Read the report ↗</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-visual gold">
-              <span class="visual-mark" aria-hidden="true">03</span>
-              <span class="visual-label">Performance · Lighthouse</span>
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <h3>Performance Optimization</h3>
-                <span class="status">Report</span>
-              </div>
-              <p>
-                Measured a page with Lighthouse, then cut image weight, deferred
-                scripts and removed render-blocking resources.
-              </p>
-              <div class="tags">
-                <span>Lighthouse</span><span>Web Vitals</span><span>Images</span>
-              </div>
-              <a class="project-link" href="https://olimjonovziyodulloh-coder.github.io/web_programming/week9.2/performance-task.html">Read the report ↗</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-visual">
-              <span class="visual-mark" aria-hidden="true">04</span>
-              <span class="visual-label">Course archive · GitHub Pages</span>
-            </div>
-            <div class="project-body">
-              <div class="project-top">
-                <h3>Web Programming Archive</h3>
-                <span class="status">Live</span>
-              </div>
-              <p>
-                Every weekly exercise, report and project from the course,
-                collected on one static site.
-              </p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
-              </div>
-              <a class="project-link" href="https://olimjonovziyodulloh-coder.github.io/web_programming/">Browse the archive ↗</a>
-            </div>
-          </article>
+        <div class="projects reveal" id="projects-root">
+          <noscript>
+            <p class="projects-fallback">
+              The interactive project grid needs JavaScript. Direct links:
+              <a href="https://olimjonovziyodulloh-coder.github.io/webpro-book-search/">Book Search</a>,
+              <a href="https://olimjonovziyodulloh-coder.github.io/task11/">Student Directory</a>,
+              <a href="https://olimjonovziyodulloh-coder.github.io/portfolio-gallery/">Portfolio Gallery</a>,
+              <a href="https://olimjonovziyodulloh-coder.github.io/react-lab/">React Lab</a>,
+              <a href="https://olimjonovziyodulloh-coder.github.io/web_programming/">Course archive</a>.
+            </p>
+          </noscript>
         </div>
       </div>
     </section>
@@ -361,35 +300,15 @@
         <a href="https://github.com/olimjonovziyodulloh-coder" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
         <a href="https://olimjonovziyodulloh-coder.github.io/web_programming/">ARCHIVE ↗</a>
         <a href="https://olimjonovziyodulloh-coder.github.io/web_programming/week10/task1.html">WEEK 10 TASKS ↗</a>
+        <a href="https://olimjonovziyodulloh-coder.github.io/react-lab/">REACT LAB ↗</a>
       </div>
     </div>
   </footer>
 
   <script>
     (function () {
-      var root = document.documentElement;
-      var toggle = document.getElementById("theme-toggle");
       var menu = document.getElementById("menu-btn");
       var links = document.getElementById("nav-links");
-
-      function renderTheme(theme) {
-        root.dataset.theme = theme;
-        var isDark = theme === "dark";
-        toggle.textContent = isDark ? "Light mode" : "Dark mode";
-        toggle.setAttribute("aria-pressed", String(isDark));
-      }
-
-      renderTheme(root.dataset.theme === "light" ? "light" : "dark");
-
-      toggle.addEventListener("click", function () {
-        var next = root.dataset.theme === "dark" ? "light" : "dark";
-        renderTheme(next);
-        try {
-          localStorage.setItem("portfolio-theme", next);
-        } catch (error) {
-          /* storage can be unavailable in private mode */
-        }
-      });
 
       menu.addEventListener("click", function () {
         var open = links.classList.toggle("open");
@@ -432,5 +351,10 @@
       }
     })();
   </script>
+
+  <!-- React 18 (UMD) powers the project grid and the theme switch. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
